@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink_200">#FFFFB6C1</color>
+    <color name="pink_500">#FFFFC0CB</color>
+    <color name="pink_700">#FFFE8FBD</color>
+    <color name="violet_200">#FFFFC0FF</color>
+    <color name="violet_700">#FFFFC0F5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="callback">#FFFFA67C</color>
+    <color name="reload">#FFD867D8</color>
+</resources>

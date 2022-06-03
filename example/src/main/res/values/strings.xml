@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JsBridge</string>
+    <string name="callback">Call Handler</string>
+    <string name="reload">Reload WebView</string>
+</resources>

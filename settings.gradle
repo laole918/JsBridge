@@ -1,0 +1,3 @@
+rootProject.name = "JsBridge"
+include ':library'
+include ':example'
