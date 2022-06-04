@@ -56,7 +56,7 @@ function setupWKWebViewJavascriptBridge(callback) {
     if (window.WKWebViewJavascriptBridge) { return callback(WKWebViewJavascriptBridge); }
     if (window.WKWVJBCallbacks) { return window.WKWVJBCallbacks.push(callback); }
     window.WKWVJBCallbacks = [callback];
-    /* For Android: Mock messageHandlers in iOS, Keep double-ended code consistent. */
+    /* For Android: Mock messageHandlers in iOS, Keep double-ended code consistent. */
     if (!window.webkit) {
         window.webkit = {};
         window.webkit.messageHandlers = {};
@@ -83,6 +83,20 @@ setupWKWebViewJavascriptBridge(function(bridge) {
 ```
 
 # Installation
+
+### JitPack.io
+
+```groovy
+repositories {
+    // ...
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    compile 'com.github.laole918:jsbridge:1.0.0'
+}
+```
+
+### Manually
 
 Either clone the repo and manually add the Files in [JsBridge](https://github.com/laole918/JsBridge/tree/main/library/src/main/java/com/github/laole918/jsbridge).
 
