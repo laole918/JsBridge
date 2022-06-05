@@ -1,5 +1,7 @@
 # JsBridge
 
+[![](https://jitpack.io/v/laole918/JsBridge.svg)](https://jitpack.io/#laole918/JsBridge)
+
 > This project is inspired by [marcuswestin/WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge) and [Lision/WKWebViewJavascriptBridge](https://github.com/Lision/WKWebViewJavascriptBridge)!
 
 iOS Obj-C : [https://github.com/laole918/WKWebViewJavascriptBridge](https://github.com/laole918/WKWebViewJavascriptBridge)
