@@ -194,7 +194,7 @@ public class WKWebViewJavascriptBridgeBase {
             if (messageJSON.startsWith("\"")
                     && messageJSON.endsWith("\"")) {
                 messageJSON = messageJSON.substring(1, messageJSON.length() - 1)
-                        .replaceAll("\\\\", "");
+                        .replace("\\\"", "\"").replace("\\\\", "\\");
             }
             JSONArray jsonArray = new JSONArray(messageJSON);
             int length = jsonArray.length();
