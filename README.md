@@ -24,31 +24,23 @@ You can write hybrid modules in just a few lines of code by using JsBridge witho
 
 ### 1. Instantiate WKWebViewJavascriptBridge with a WebView:
 
-```java
-class YourClass {
-    public void yourMethod() {
-        bridge = new WKWebViewJavascriptBridge(webView);
-    }
-}
+```groovy
+bridge = new WKWebViewJavascriptBridge(webView);
 ```
 
 ### 2. Register a Handler in Native, and Call a JS Handler:
 
-```java
-class YourClass {
-    public void yourMethod() {
-        bridge.registerHandler("testiOSCallback", new WKWebViewJavascriptBridgeBase.WVJBHandler() {
-            @Override
-            public void handle(Object data, WKWebViewJavascriptBridgeBase.WVJBResponseCallback callback) {
-                Log.d(TAG, String.format("testiOSCallback called: %s", data == null ? "null" : data.toString()));
-                callback.callback("Response from testiOSCallback");
-            }
-        });
-        HashMap<String, String> data = new HashMap<>();
-        data.put("foo", "before ready");
-        bridge.callHandler("testJavascriptHandler", new JSONObject(data), null);
+```groovy
+bridge.registerHandler("testiOSCallback", new WKWebViewJavascriptBridgeBase.WVJBHandler() {
+    @Override
+    public void handle(Object data, WKWebViewJavascriptBridgeBase.WVJBResponseCallback callback) {
+        Log.d(TAG, String.format("testiOSCallback called: %s", data == null ? "null" : data.toString()));
+        callback.callback("Response from testiOSCallback");
     }
-}
+});
+HashMap<String, String> data = new HashMap<>();
+data.put("foo", "before ready");
+bridge.callHandler("testJavascriptHandler", new JSONObject(data), null);
 ```
 
 ### 3. Copy and Paste setupWKWebViewJavascriptBridge into Your JS:
@@ -94,7 +86,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    compile 'com.github.laole918:jsbridge:1.0.0'
+    implementation 'com.github.laole918:jsbridge:1.0.1'
 }
 ```
 
